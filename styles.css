@@ -1,0 +1,258 @@
+:root {
+  --bg: #ffffff;
+  --bg-alt: #f7f8fb;
+  --ink: #0c1424;
+  --ink-2: #3b4658;
+  --ink-3: #66738a;
+  --line: #e6e9ef;
+  --brand: #0a7abf;
+  --brand-2: #0ec4a0;
+  --tag-health-bg: #e9f5fd;
+  --tag-health-fg: #066199;
+  --tag-product-bg: #efeaff;
+  --tag-product-fg: #4f3bd9;
+  --tag-compliance-bg: #e6f7ee;
+  --tag-compliance-fg: #057143;
+  --tag-soon-bg: #fff2d6;
+  --tag-soon-fg: #8a5a07;
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(12, 20, 36, 0.07);
+}
+
+* { box-sizing: border-box; }
+html { -webkit-font-smoothing: antialiased; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.55;
+}
+a { color: var(--brand); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; }
+.container { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+/* ───── Nav ───── */
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 32px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(8px);
+  position: sticky; top: 0; z-index: 50;
+}
+.nav nav { display: flex; gap: 24px; }
+.nav nav a { color: var(--ink-2); font-weight: 500; font-size: 14px; }
+.nav nav a:hover { color: var(--brand); text-decoration: none; }
+.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 700; }
+.brand:hover { text-decoration: none; }
+.brand-mark {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  color: #fff; border-radius: 8px;
+  font-size: 18px; font-weight: 800;
+}
+.brand-name { font-size: 14px; letter-spacing: 0.4px; }
+.brand-footer .brand-mark { background: #fff; color: var(--brand); }
+.brand-footer .brand-name { color: #fff; }
+
+/* ───── Hero ───── */
+.hero {
+  padding: 96px 0 80px;
+  background: linear-gradient(160deg, #f0f9ff 0%, #ecfdf5 100%);
+  border-bottom: 1px solid var(--line);
+}
+.eyebrow {
+  display: inline-block;
+  background: rgba(10, 122, 191, 0.08);
+  color: var(--brand);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  margin: 0 0 24px;
+}
+.hero h1 {
+  font-size: clamp(34px, 6vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+  margin: 0 0 20px;
+  font-weight: 800;
+}
+.lede {
+  font-size: 19px;
+  color: var(--ink-2);
+  max-width: 640px;
+  margin: 0 0 32px;
+}
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14.5px;
+  border: 1px solid transparent;
+  transition: transform 0.05s ease, box-shadow 0.15s ease;
+}
+.btn:hover { text-decoration: none; transform: translateY(-1px); }
+.btn-primary {
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(10, 122, 191, 0.25);
+}
+.btn-primary:hover { box-shadow: 0 10px 22px rgba(10, 122, 191, 0.3); }
+.btn-ghost {
+  background: #fff;
+  color: var(--ink);
+  border-color: var(--line);
+}
+.btn-ghost:hover { border-color: var(--ink-3); }
+
+/* ───── Sections ───── */
+.section { padding: 88px 0; }
+.section-alt { background: var(--bg-alt); }
+.section h2 {
+  font-size: clamp(26px, 4vw, 36px);
+  letter-spacing: -0.5px;
+  margin: 8px 0 40px;
+  font-weight: 700;
+}
+.section-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 11px;
+  color: var(--ink-3);
+  margin: 0;
+  font-weight: 700;
+}
+
+/* ───── Product grid ───── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 28px 26px;
+  border-radius: var(--radius);
+  display: flex; flex-direction: column;
+  transition: border-color 0.15s ease, box-shadow 0.2s ease;
+}
+.card:hover { border-color: var(--brand); box-shadow: var(--shadow); }
+.card h3 { font-size: 20px; margin: 16px 0 10px; font-weight: 700; }
+.card p { color: var(--ink-2); margin: 0 0 18px; font-size: 14.5px; flex-grow: 1; }
+.card a {
+  color: var(--brand);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: auto;
+}
+.card a:hover { text-decoration: underline; }
+.card-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  align-self: flex-start;
+}
+.tag-health { background: var(--tag-health-bg); color: var(--tag-health-fg); }
+.tag-product { background: var(--tag-product-bg); color: var(--tag-product-fg); }
+.tag-compliance { background: var(--tag-compliance-bg); color: var(--tag-compliance-fg); }
+.tag-soon { background: var(--tag-soon-bg); color: var(--tag-soon-fg); }
+.card-roadmap { background: linear-gradient(180deg, #fff 0%, var(--bg-alt) 100%); }
+.card-soon { color: var(--ink-3); font-size: 13px; font-style: italic; margin-top: auto; }
+
+/* ───── About grid ───── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.about-grid p { color: var(--ink-2); margin: 0 0 16px; font-size: 16px; }
+.info-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px 28px 18px;
+  box-shadow: var(--shadow);
+}
+.info-card h4 { margin: 0 0 18px; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; color: var(--ink-3); }
+.info-card dl { margin: 0; }
+.info-card dt { font-size: 12px; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.6px; margin-top: 10px; }
+.info-card dt:first-child { margin-top: 0; }
+.info-card dd { margin: 4px 0 12px; font-size: 14.5px; color: var(--ink); }
+
+/* ───── Contact CTA ───── */
+.contact-cta { text-align: center; max-width: 640px; margin: 0 auto; }
+.contact-cta p { color: var(--ink-2); font-size: 17px; margin: 0 0 24px; }
+.contact-cta .cta-row { justify-content: center; }
+
+/* ───── Standalone page (contact/privacy/terms) ───── */
+.page {
+  padding: 56px 0 96px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+.page h1 { font-size: 36px; margin: 8px 0 24px; letter-spacing: -0.5px; font-weight: 800; }
+.page h2 { font-size: 22px; margin: 32px 0 12px; font-weight: 700; }
+.page p, .page li { color: var(--ink-2); font-size: 15.5px; }
+.page a { color: var(--brand); }
+.page .meta { color: var(--ink-3); font-size: 13px; margin-bottom: 32px; }
+.contact-block {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  margin: 24px 0;
+  box-shadow: var(--shadow);
+}
+.contact-block strong { display: block; margin-bottom: 4px; }
+.contact-block + .contact-block { margin-top: 16px; }
+
+/* ───── Footer ───── */
+.footer {
+  background: #0c1424;
+  color: #c5cad4;
+  padding: 64px 0 24px;
+  margin-top: 0;
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1.4fr 2fr;
+  gap: 48px;
+}
+.footer-meta { font-size: 13px; color: #8e95a3; margin-top: 14px; line-height: 1.7; }
+.footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.footer-cols h5 { font-size: 13px; color: #fff; margin: 0 0 14px; letter-spacing: 0.6px; text-transform: uppercase; }
+.footer-cols a { display: block; color: #c5cad4; font-size: 14px; padding: 4px 0; }
+.footer-cols a:hover { color: #fff; text-decoration: none; }
+.footer-bottom {
+  border-top: 1px solid #1d273b;
+  margin-top: 40px;
+  padding-top: 20px;
+  font-size: 12px;
+  color: #6e7689;
+}
+
+/* ───── Responsive ───── */
+@media (max-width: 760px) {
+  .nav { padding: 14px 20px; }
+  .nav nav { gap: 16px; }
+  .nav nav a { font-size: 13px; }
+  .hero { padding: 60px 0 56px; }
+  .section { padding: 60px 0; }
+  .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+  .footer-cols { grid-template-columns: repeat(3, 1fr); }
+}
