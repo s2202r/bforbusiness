@@ -147,14 +147,20 @@ img { max-width: 100%; }
 .card:hover { border-color: var(--brand); box-shadow: var(--shadow); }
 .card h3 { font-size: 20px; margin: 16px 0 10px; font-weight: 700; }
 .card p { color: var(--ink-2); margin: 0 0 18px; font-size: 14.5px; flex-grow: 1; }
-.card a {
+.card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 4px;
+}
+.card-links a {
   color: var(--brand);
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
-  margin-top: auto;
 }
-.card a:hover { text-decoration: underline; }
+.card-links a:hover { text-decoration: underline; }
 .card-tag {
   display: inline-block;
   padding: 4px 10px;
