@@ -15,6 +15,8 @@
   --tag-compliance-fg: #057143;
   --tag-soon-bg: #fff2d6;
   --tag-soon-fg: #8a5a07;
+  --tag-social-bg: #ffe6ee;
+  --tag-social-fg: #b8155a;
   --radius: 14px;
   --shadow: 0 10px 30px rgba(12, 20, 36, 0.07);
 }
@@ -175,6 +177,7 @@ img { max-width: 100%; }
 .tag-product { background: var(--tag-product-bg); color: var(--tag-product-fg); }
 .tag-compliance { background: var(--tag-compliance-bg); color: var(--tag-compliance-fg); }
 .tag-soon { background: var(--tag-soon-bg); color: var(--tag-soon-fg); }
+.tag-social { background: var(--tag-social-bg); color: var(--tag-social-fg); }
 .card-roadmap { background: linear-gradient(180deg, #fff 0%, var(--bg-alt) 100%); }
 .card-soon { color: var(--ink-3); font-size: 13px; font-style: italic; margin-top: auto; }
 
