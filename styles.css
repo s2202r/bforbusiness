@@ -17,6 +17,8 @@
   --tag-soon-fg: #8a5a07;
   --tag-social-bg: #ffe6ee;
   --tag-social-fg: #b8155a;
+  --tag-mobility-bg: #e3f0ff;
+  --tag-mobility-fg: #1a4ea8;
   --radius: 14px;
   --shadow: 0 10px 30px rgba(12, 20, 36, 0.07);
 }
@@ -178,6 +180,7 @@ img { max-width: 100%; }
 .tag-compliance { background: var(--tag-compliance-bg); color: var(--tag-compliance-fg); }
 .tag-soon { background: var(--tag-soon-bg); color: var(--tag-soon-fg); }
 .tag-social { background: var(--tag-social-bg); color: var(--tag-social-fg); }
+.tag-mobility { background: var(--tag-mobility-bg); color: var(--tag-mobility-fg); }
 .card-roadmap { background: linear-gradient(180deg, #fff 0%, var(--bg-alt) 100%); }
 .card-soon { color: var(--ink-3); font-size: 13px; font-style: italic; margin-top: auto; }
 
