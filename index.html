@@ -23,79 +23,14 @@
   </header>
 
   <section class="hero">
-    <div class="hero-glow" aria-hidden="true"></div>
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">BUILTFORBUSINESS LLP · India</p>
-        <h1>Building purposeful digital products for India.</h1>
-        <p class="lede">A portfolio of consumer apps and B2B platforms — and a
-          studio that builds websites, mobile apps, AI automations, workflow
-          solutions, and delivers consulting &amp; training for teams.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#products">Explore products</a>
-          <a class="btn btn-ghost" href="#services">Our services</a>
-        </div>
-      </div>
-
-      <div class="hero-slider" aria-roledescription="carousel" aria-label="Featured products">
-        <div class="slider-viewport">
-          <div class="slider-track" id="sliderTrack">
-            <article class="slide" style="--accent:#066199;--accent-bg:#e9f5fd;">
-              <span class="slide-tag">Healthcare</span>
-              <h3>CareLink</h3>
-              <p>Doctor consultations, home healthcare, and AI-powered symptom
-                guidance in regional Indian languages.</p>
-              <a href="https://carelink.ind.in" target="_blank" rel="noopener">Visit carelink.ind.in →</a>
-            </article>
-            <article class="slide" style="--accent:#4f3bd9;--accent-bg:#efeaff;">
-              <span class="slide-tag">Consumer</span>
-              <h3>Divyam</h3>
-              <p>Kundli, daily horoscope, Vastu, palm reading, verified pandits,
-                and puja kits — rooted in Vedic wisdom.</p>
-              <a href="https://divyam.app" target="_blank" rel="noopener">Visit divyam.app →</a>
-            </article>
-            <article class="slide" style="--accent:#b8155a;--accent-bg:#ffe6ee;">
-              <span class="slide-tag">Social</span>
-              <h3>Saathi</h3>
-              <p>A social app that helps people find companions, conversations,
-                and community across India.</p>
-              <a href="https://saathi.space" target="_blank" rel="noopener">Visit saathi.space →</a>
-            </article>
-            <article class="slide" style="--accent:#1a4ea8;--accent-bg:#e3f0ff;">
-              <span class="slide-tag">Mobility</span>
-              <h3>Crew</h3>
-              <p>Ride-sharing for daily commuters — split fuel costs, cut
-                traffic, and travel with verified colleagues.</p>
-              <a href="https://mycrew.co.in" target="_blank" rel="noopener">Visit mycrew.co.in →</a>
-            </article>
-            <article class="slide" style="--accent:#b8480f;--accent-bg:#ffece0;">
-              <span class="slide-tag">Travel</span>
-              <h3>MadNomads</h3>
-              <p>A marketplace for non-conventional stays and adventure —
-                camps, homestays, rafting, treks, and offbeat road trips.</p>
-              <a href="https://madnomads.in" target="_blank" rel="noopener">Visit madnomads.in →</a>
-            </article>
-            <article class="slide" style="--accent:#057143;--accent-bg:#e6f7ee;">
-              <span class="slide-tag">Compliance</span>
-              <h3>EPR HQ</h3>
-              <p>Extended Producer Responsibility compliance for Indian
-                businesses — registration, filings, audit-ready records.</p>
-              <a href="https://eprhq.in" target="_blank" rel="noopener">Visit eprhq.in →</a>
-            </article>
-            <article class="slide" style="--accent:#2f3a52;--accent-bg:#eef0f4;">
-              <span class="slide-tag">B2B</span>
-              <h3>Procurement platform</h3>
-              <p>B2B procurement for raw-material sourcing across Indian
-                manufacturing. Launching in 2026.</p>
-              <a href="https://bforbusiness.in" target="_blank" rel="noopener">Visit bforbusiness.in →</a>
-            </article>
-          </div>
-        </div>
-        <div class="slider-controls">
-          <button class="slider-btn" id="sliderPrev" aria-label="Previous product">‹</button>
-          <div class="slider-dots" id="sliderDots" role="tablist"></div>
-          <button class="slider-btn" id="sliderNext" aria-label="Next product">›</button>
-        </div>
+    <div class="container">
+      <p class="eyebrow">BUILTFORBUSINESS LLP · India</p>
+      <h1>Building purposeful<br>digital products for India.</h1>
+      <p class="lede">We design and ship consumer apps and B2B platforms across healthcare,
+        compliance, and procurement — engineered locally, deployed nationally.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#products">Explore products</a>
+        <a class="btn btn-ghost" href="/contact.html">Get in touch</a>
       </div>
     </div>
   </section>
@@ -323,53 +258,6 @@
       © <span id="year"></span> BUILTFORBUSINESS LLP. All rights reserved.
     </div>
   </footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    (function () {
-      var track = document.getElementById('sliderTrack');
-      var dotsWrap = document.getElementById('sliderDots');
-      var prev = document.getElementById('sliderPrev');
-      var next = document.getElementById('sliderNext');
-      if (!track) return;
-      var slides = track.children;
-      var total = slides.length;
-      var index = 0;
-      var timer = null;
-
-      for (var i = 0; i < total; i++) {
-        var dot = document.createElement('button');
-        dot.className = 'slider-dot';
-        dot.setAttribute('role', 'tab');
-        dot.setAttribute('aria-label', 'Show slide ' + (i + 1));
-        dot.dataset.idx = i;
-        dotsWrap.appendChild(dot);
-      }
-      var dots = dotsWrap.children;
-
-      function go(i) {
-        index = (i + total) % total;
-        track.style.transform = 'translateX(-' + (index * 100) + '%)';
-        for (var k = 0; k < dots.length; k++) {
-          dots[k].classList.toggle('is-active', k === index);
-        }
-      }
-      function start() { stop(); timer = setInterval(function () { go(index + 1); }, 5000); }
-      function stop() { if (timer) { clearInterval(timer); timer = null; } }
-
-      prev.addEventListener('click', function () { go(index - 1); start(); });
-      next.addEventListener('click', function () { go(index + 1); start(); });
-      dotsWrap.addEventListener('click', function (e) {
-        var t = e.target;
-        if (t && t.dataset && t.dataset.idx != null) { go(+t.dataset.idx); start(); }
-      });
-      var slider = document.querySelector('.hero-slider');
-      slider.addEventListener('mouseenter', stop);
-      slider.addEventListener('mouseleave', start);
-
-      go(0);
-      start();
-    })();
-  </script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
