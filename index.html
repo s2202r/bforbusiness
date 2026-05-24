@@ -16,6 +16,7 @@
     </a>
     <nav>
       <a href="#products">Products</a>
+      <a href="#services">Services</a>
       <a href="#about">About</a>
       <a href="/contact.html">Contact</a>
     </nav>
@@ -23,21 +24,79 @@
 
   <section class="hero">
     <div class="hero-glow" aria-hidden="true"></div>
-    <div class="container hero-inner">
-      <p class="eyebrow">BUILTFORBUSINESS LLP · India</p>
-      <h1>Building purposeful<br>digital products for <span class="hero-accent">India</span>.</h1>
-      <p class="lede">A portfolio of consumer apps and B2B platforms across
-        healthcare, mobility, travel, spirituality, social, and compliance —
-        engineered locally, deployed nationally.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="#products">Explore products</a>
-        <a class="btn btn-ghost" href="/contact.html">Get in touch</a>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">BUILTFORBUSINESS LLP · India</p>
+        <h1>Building purposeful digital products for India.</h1>
+        <p class="lede">A portfolio of consumer apps and B2B platforms — and a
+          studio that builds websites, mobile apps, AI automations, workflow
+          solutions, and delivers consulting &amp; training for teams.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#products">Explore products</a>
+          <a class="btn btn-ghost" href="#services">Our services</a>
+        </div>
       </div>
-      <ul class="hero-stats" aria-label="Portfolio at a glance">
-        <li><strong>7</strong><span>Live &amp; upcoming products</span></li>
-        <li><strong>6</strong><span>Industries served</span></li>
-        <li><strong>1</strong><span>Mission — built for India</span></li>
-      </ul>
+
+      <div class="hero-slider" aria-roledescription="carousel" aria-label="Featured products">
+        <div class="slider-viewport">
+          <div class="slider-track" id="sliderTrack">
+            <article class="slide" style="--accent:#066199;--accent-bg:#e9f5fd;">
+              <span class="slide-tag">Healthcare</span>
+              <h3>CareLink</h3>
+              <p>Doctor consultations, home healthcare, and AI-powered symptom
+                guidance in regional Indian languages.</p>
+              <a href="https://carelink.ind.in" target="_blank" rel="noopener">Visit carelink.ind.in →</a>
+            </article>
+            <article class="slide" style="--accent:#4f3bd9;--accent-bg:#efeaff;">
+              <span class="slide-tag">Consumer</span>
+              <h3>Divyam</h3>
+              <p>Kundli, daily horoscope, Vastu, palm reading, verified pandits,
+                and puja kits — rooted in Vedic wisdom.</p>
+              <a href="https://divyam.app" target="_blank" rel="noopener">Visit divyam.app →</a>
+            </article>
+            <article class="slide" style="--accent:#b8155a;--accent-bg:#ffe6ee;">
+              <span class="slide-tag">Social</span>
+              <h3>Saathi</h3>
+              <p>A social app that helps people find companions, conversations,
+                and community across India.</p>
+              <a href="https://saathi.space" target="_blank" rel="noopener">Visit saathi.space →</a>
+            </article>
+            <article class="slide" style="--accent:#1a4ea8;--accent-bg:#e3f0ff;">
+              <span class="slide-tag">Mobility</span>
+              <h3>Crew</h3>
+              <p>Ride-sharing for daily commuters — split fuel costs, cut
+                traffic, and travel with verified colleagues.</p>
+              <a href="https://mycrew.co.in" target="_blank" rel="noopener">Visit mycrew.co.in →</a>
+            </article>
+            <article class="slide" style="--accent:#b8480f;--accent-bg:#ffece0;">
+              <span class="slide-tag">Travel</span>
+              <h3>MadNomads</h3>
+              <p>A marketplace for non-conventional stays and adventure —
+                camps, homestays, rafting, treks, and offbeat road trips.</p>
+              <a href="https://madnomads.in" target="_blank" rel="noopener">Visit madnomads.in →</a>
+            </article>
+            <article class="slide" style="--accent:#057143;--accent-bg:#e6f7ee;">
+              <span class="slide-tag">Compliance</span>
+              <h3>EPR HQ</h3>
+              <p>Extended Producer Responsibility compliance for Indian
+                businesses — registration, filings, audit-ready records.</p>
+              <a href="https://eprhq.in" target="_blank" rel="noopener">Visit eprhq.in →</a>
+            </article>
+            <article class="slide" style="--accent:#2f3a52;--accent-bg:#eef0f4;">
+              <span class="slide-tag">B2B</span>
+              <h3>Procurement platform</h3>
+              <p>B2B procurement for raw-material sourcing across Indian
+                manufacturing. Launching in 2026.</p>
+              <a href="https://bforbusiness.in" target="_blank" rel="noopener">Visit bforbusiness.in →</a>
+            </article>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn" id="sliderPrev" aria-label="Previous product">‹</button>
+          <div class="slider-dots" id="sliderDots" role="tablist"></div>
+          <button class="slider-btn" id="sliderNext" aria-label="Next product">›</button>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -125,7 +184,59 @@
     </div>
   </section>
 
-  <section id="about" class="section section-alt">
+  <section id="services" class="section section-alt">
+    <div class="container">
+      <p class="section-eyebrow">What we do</p>
+      <h2>Beyond our own products — we build for others, too.</h2>
+      <p class="section-lede">An in-house engineering and design studio
+        available to startups, enterprises, and government partners.</p>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M3 8h18M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Website &amp; App Development</h3>
+          <p>Production-ready websites, mobile apps, and progressive web apps —
+            designed, engineered, and shipped end-to-end.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>
+          </div>
+          <h3>AI Automation</h3>
+          <p>Integrate modern AI into your business — chatbots, document
+            processing, intelligent search, and content generation.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.5 6h7M8.5 18h7M6 8.5v7M18 8.5v7"/></svg>
+          </div>
+          <h3>Workflow Solutions</h3>
+          <p>Custom internal tools, integrations, and automations across CRMs,
+            ERPs, and SaaS platforms to streamline operations.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M7 9.5v5c0 1.5 2.5 3 5 3s5-1.5 5-3v-5"/><path d="M21 7v6"/></svg>
+          </div>
+          <h3>Consulting &amp; Training</h3>
+          <p>Product strategy, tech advisory, and hands-on training — from
+            technical onboarding to AI-literacy programs for your team.</p>
+        </article>
+      </div>
+
+      <div class="services-cta">
+        <a class="btn btn-primary" href="/contact.html">Start a project</a>
+        <a class="btn btn-ghost" href="mailto:founder@bfor.business">founder@bfor.business</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
     <div class="container about-grid">
       <div>
         <p class="section-eyebrow">About us</p>
@@ -190,6 +301,13 @@
           <a href="https://bforbusiness.in" target="_blank" rel="noopener">Procurement</a>
         </div>
         <div>
+          <h5>Services</h5>
+          <a href="#services">Web &amp; App Development</a>
+          <a href="#services">AI Automation</a>
+          <a href="#services">Workflow Solutions</a>
+          <a href="#services">Consulting &amp; Training</a>
+        </div>
+        <div>
           <h5>Company</h5>
           <a href="#about">About</a>
           <a href="/contact.html">Contact</a>
@@ -205,6 +323,53 @@
       © <span id="year"></span> BUILTFORBUSINESS LLP. All rights reserved.
     </div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    (function () {
+      var track = document.getElementById('sliderTrack');
+      var dotsWrap = document.getElementById('sliderDots');
+      var prev = document.getElementById('sliderPrev');
+      var next = document.getElementById('sliderNext');
+      if (!track) return;
+      var slides = track.children;
+      var total = slides.length;
+      var index = 0;
+      var timer = null;
+
+      for (var i = 0; i < total; i++) {
+        var dot = document.createElement('button');
+        dot.className = 'slider-dot';
+        dot.setAttribute('role', 'tab');
+        dot.setAttribute('aria-label', 'Show slide ' + (i + 1));
+        dot.dataset.idx = i;
+        dotsWrap.appendChild(dot);
+      }
+      var dots = dotsWrap.children;
+
+      function go(i) {
+        index = (i + total) % total;
+        track.style.transform = 'translateX(-' + (index * 100) + '%)';
+        for (var k = 0; k < dots.length; k++) {
+          dots[k].classList.toggle('is-active', k === index);
+        }
+      }
+      function start() { stop(); timer = setInterval(function () { go(index + 1); }, 5000); }
+      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+      prev.addEventListener('click', function () { go(index - 1); start(); });
+      next.addEventListener('click', function () { go(index + 1); start(); });
+      dotsWrap.addEventListener('click', function (e) {
+        var t = e.target;
+        if (t && t.dataset && t.dataset.idx != null) { go(+t.dataset.idx); start(); }
+      });
+      var slider = document.querySelector('.hero-slider');
+      slider.addEventListener('mouseenter', stop);
+      slider.addEventListener('mouseleave', start);
+
+      go(0);
+      start();
+    })();
+  </script>
 </body>
 </html>
