@@ -23,6 +23,8 @@
   --tag-b2b-fg: #2f3a52;
   --tag-travel-bg: #ffece0;
   --tag-travel-fg: #b8480f;
+  --tag-ai-bg: #e0f7f4;
+  --tag-ai-fg: #0a7a6b;
   --radius: 14px;
   --shadow: 0 10px 30px rgba(12, 20, 36, 0.07);
 }
@@ -187,6 +189,7 @@ img { max-width: 100%; }
 .tag-mobility { background: var(--tag-mobility-bg); color: var(--tag-mobility-fg); }
 .tag-b2b { background: var(--tag-b2b-bg); color: var(--tag-b2b-fg); }
 .tag-travel { background: var(--tag-travel-bg); color: var(--tag-travel-fg); }
+.tag-ai { background: var(--tag-ai-bg); color: var(--tag-ai-fg); }
 .card-roadmap { background: linear-gradient(180deg, #fff 0%, var(--bg-alt) 100%); }
 .card-soon { color: var(--ink-3); font-size: 13px; font-style: italic; margin-top: auto; }
 
